@@ -1,0 +1,3517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physiomy Rehab – Coimbatore's Trusted Physiotherapy & Rehab Centre</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-teal: #0EA5A4;
+      --primary-teal-dark: #0F766E;
+      --accent-green: #22C55E;
+      --accent-green-dark: #15803D;
+      --bg-light: #F0FDFA;
+      --text-dark: #0F172A;
+      --text-muted: #64748B;
+      --border-light: #E2E8F0;
+      --white: #FFFFFF;
+      --radius-md: 12px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06);
+      --shadow-md: 0 10px 30px -10px rgba(14, 165, 164, 0.12);
+      --shadow-lg: 0 20px 48px -10px rgba(14, 165, 164, 0.15);
+      --shadow-premium: 0 25px 50px -12px rgba(14, 165, 164, 0.08);
+      --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--white);
+      color: var(--text-dark);
+      font-size: 15px;
+      overflow-x: hidden;
+      line-height: 1.6
+    }
+
+    /* ── NAVBAR ── */
+    #mainNav {
+      background: var(--white);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 20px 0;
+      transition: var(--transition);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    #mainNav.scrolled {
+      padding: 12px 0;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo img {
+      height: 50px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: .875rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      padding: .5rem .75rem;
+      transition: color var(--transition)
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: var(--primary-teal)
+    }
+
+    .btn-cta {
+      background: var(--accent-green);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-size: .875rem;
+      font-weight: 600;
+      padding: .5rem 1.25rem;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition)
+    }
+
+    .btn-cta:hover {
+      background: var(--accent-green-dark);
+      color: var(--white);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(34, 197, 94, 0.25)
+    }
+
+    .btn-wa-nav {
+      background: #25D366;
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      padding: .5rem .85rem;
+      transition: background var(--transition)
+    }
+
+    .btn-wa-nav:hover {
+      background: #1ebe5d;
+      color: var(--white)
+    }
+
+    .btn-gallery {
+      background: rgba(14, 165, 164, 0.1);
+      color: var(--primary-teal);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: 1.5px solid var(--primary-teal);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: 15px;
+    }
+
+    .btn-gallery:hover {
+      background: var(--primary-teal);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(14, 165, 164, 0.2);
+    }
+
+    @media (max-width: 991px) {
+      .btn-gallery {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    /* ── HERO ── */
+    #hero {
+      padding: 0;
+      height: calc(100vh - 80px);
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(to right,
+          rgba(255, 255, 255, 0.7) 0%,
+          rgba(255, 255, 255, 0.3) 40%,
+          rgba(255, 255, 255, 0) 80%),
+        url('girl bg.png');
+      background-size: cover;
+      background-position: center right;
+      position: relative;
+      overflow: visible;
+    }
+
+    /* Edge merging and smoothing */
+    #hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom,
+          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0) 20%,
+          rgba(255, 255, 255, 0) 80%,
+          rgba(255, 255, 255, 0.2) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.85) 45%, rgba(255, 255, 255, 0) 80%);
+      z-index: 1;
+    }
+
+    #hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-heading {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+      color: var(--text-dark);
+      letter-spacing: -2px;
+    }
+
+    .hero-heading .green {
+      background: linear-gradient(135deg, var(--primary-teal), var(--accent-green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0px 10px 30px rgba(34, 197, 94, 0.2);
+    }
+
+    .quick-form-card {
+      position: absolute;
+      top: 45%;
+      right: 0;
+      transform: translateY(-50%);
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.1);
+      padding: 1rem 1.5rem;
+      width: 450px;
+      border: 1px solid var(--border-light);
+      z-index: 10;
+    }
+
+    .glass-mobile-card {
+      background: rgba(255, 255, 255, 0.35) !important;
+      backdrop-filter: blur(40px) !important;
+      -webkit-backdrop-filter: blur(40px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.6) !important;
+      border-radius: 24px !important;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .glass-mobile-card .form-control,
+    .glass-mobile-card .form-select {
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      padding: 0.55rem 0.75rem;
+      font-size: 0.8rem;
+      color: var(--text-dark);
+    }
+
+    .glass-mobile-card .form-control:focus,
+    .glass-mobile-card .form-select:focus {
+      background: rgba(255, 255, 255, 0.3);
+      border-color: rgba(255, 255, 255, 0.6);
+      box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+      outline: none;
+    }
+
+    .glass-mobile-card .gender-capsule {
+      background: rgba(255, 255, 255, 0.4);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .quick-form-card h5 {
+      font-weight: 800;
+      font-size: 1.15rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-dark);
+      text-align: center;
+    }
+
+    .quick-form-card .sub-text {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+
+    .quick-form-card .form-control,
+    .quick-form-card .form-select {
+      font-size: .82rem;
+      border-radius: 10px;
+      border: 1.5px solid var(--border-light);
+      padding: .5rem .75rem;
+      margin-bottom: 0.6rem;
+      transition: all var(--transition)
+    }
+
+    .quick-form-card .form-control:focus,
+    .quick-form-card .form-select:focus {
+      border-color: var(--accent-green);
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+      outline: none;
+    }
+
+    .quick-form-card .btn-book {
+      background: var(--accent-green);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      width: 100%;
+      padding: 0.65rem;
+      margin-top: 0.25rem;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .quick-form-card .btn-book:hover {
+      background: var(--accent-green-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px -4px rgba(34, 197, 94, 0.2);
+    }
+
+    /* ── GENDER & DOCTOR SUGGESTION ── */
+    .gender-selection {
+      margin-bottom: 0.6rem;
+    }
+
+    .gender-capsule {
+      display: flex;
+      background: var(--white);
+      padding: 3px;
+      border: 1.5px solid var(--border-light);
+      border-radius: 10px;
+      gap: 3px;
+    }
+
+    .btn-gender {
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      transition: all .3s;
+      cursor: pointer;
+    }
+
+    .btn-gender.active {
+      background: var(--primary-teal);
+      color: var(--white);
+      box-shadow: 0 4px 12px rgba(14, 165, 164, 0.2);
+    }
+
+    .doctor-suggestion-box {
+      background: rgba(14, 165, 164, 0.05);
+      border: 1px dashed rgba(14, 165, 164, 0.3);
+      padding: 6px 10px;
+      border-radius: 10px;
+      margin-bottom: 0.6rem;
+      display: none;
+      animation: fadeIn .3s ease;
+    }
+
+    .doctor-suggestion-box p {
+      margin: 0;
+      font-size: 0.7rem;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .form-footer {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 1rem;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .form-footer i {
+      color: var(--text-dark);
+      margin-right: 4px;
+      font-size: 0.85rem;
+    }
+
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(14, 165, 164, 0.1);
+      color: var(--primary-teal-dark);
+      font-size: .85rem;
+      font-weight: 700;
+      padding: .6rem 1.5rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(14, 165, 164, 0.2);
+      box-shadow: 0 4px 15px rgba(14, 165, 164, 0.1);
+    }
+
+    .hero-sub {
+      color: #334155;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 520px;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .trust-indicators {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      margin-bottom: 3rem;
+      max-width: 600px;
+    }
+
+    .trust-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .trust-item .val {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .trust-item .val i {
+      font-size: 1.2rem;
+      color: var(--primary-teal);
+      width: 40px;
+      height: 40px;
+      border: 1.5px solid var(--border-light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .trust-item .lbl {
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .btn-primary-cta,
+    .btn-outline-wa {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: linear-gradient(135deg, var(--accent-green), var(--primary-teal));
+      color: var(--white) !important;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.75rem 1.25rem;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+      text-decoration: none;
+      flex: 1;
+      white-space: nowrap;
+    }
+
+    .btn-primary-cta:hover,
+    .btn-outline-wa:hover {
+      background: linear-gradient(135deg, var(--primary-teal), var(--accent-green));
+      color: var(--white) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(34, 197, 94, 0.4);
+    }
+
+    .avail-text {
+      margin-top: 1.5rem;
+      font-size: .85rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .avail-dot {
+      width: 10px;
+      height: 10px;
+      background: var(--accent-green);
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: .5;
+        transform: scale(1.2);
+      }
+    }
+
+    .hero-img-wrap {
+      display: none;
+      /* Removed foreground image as it's now in the background */
+    }
+
+    /* ── TRUST STRIP FLOATING ── */
+    .trust-strip-floating {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      width: calc(100% - 60px);
+      max-width: 950px;
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+      padding: 1rem 1.25rem;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      z-index: 20;
+      border: 1.5px solid var(--border-light);
+    }
+
+    .ts-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 6px;
+      border-right: 1px solid var(--border-light);
+    }
+
+    .ts-item:last-child {
+      border-right: none;
+    }
+
+    .ts-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--bg-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-teal);
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .ts-icon i {
+      color: var(--accent-green);
+    }
+
+    .ts-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ts-val {
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--text-dark);
+      line-height: 1.2;
+    }
+
+    .ts-lbl {
+      font-size: .75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* ── TRUST STRIP ── */
+    #trustStrip {
+      padding: 48px 0;
+      background: var(--white);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .trust-strip-item {
+      text-align: center;
+      padding: 12px;
+      transition: var(--transition);
+    }
+
+    .trust-strip-item:hover {
+      transform: translateY(-5px);
+    }
+
+    /* ── SERVICES ── */
+    #services {
+      background: var(--bg-light);
+      padding: 80px 0;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      cursor: pointer;
+      transition: var(--transition);
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--primary-teal);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+
+    .service-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-premium);
+    }
+
+    .svc-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--bg-light);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: var(--transition);
+      color: var(--primary-teal);
+    }
+
+    .service-card:hover .svc-icon {
+      background: var(--primary-teal);
+      color: var(--white);
+      transform: rotateY(180deg);
+    }
+
+    .service-card h5 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .svc-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.25rem 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    @media (min-width: 992px) {
+      .svc-list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .svc-list li {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+    }
+
+    .svc-list li i {
+      color: var(--primary-teal);
+      font-size: 0.8rem;
+    }
+
+    /* ── TREATMENTS ── */
+    #treatments {
+      padding: 80px 0;
+      background: var(--white);
+    }
+
+    .treatments-scroll {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+
+    #treatmentDoctorSuggest {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      margin-bottom: 2.5rem;
+      transition: var(--transition);
+    }
+
+    #treatmentDoctorSuggest:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .suggest-box {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .suggest-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--primary-teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 12px rgba(14, 165, 164, 0.2);
+    }
+
+    .treat-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      background: var(--white);
+      border: 1.5px solid var(--border-light);
+      border-radius: 50px;
+      padding: .5rem 1.25rem .5rem .6rem;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: all var(--transition);
+      white-space: nowrap;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .treat-chip img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--white);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .treat-chip:hover {
+      border-color: var(--primary-teal);
+      color: var(--primary-teal);
+    }
+
+    .treat-chip.active {
+      background: var(--primary-teal);
+      color: var(--white);
+      border-color: var(--primary-teal);
+      box-shadow: 0 4px 12px rgba(14, 165, 164, 0.2);
+    }
+
+    .btn-view-all {
+      border: 2px solid var(--primary-teal);
+      color: var(--primary-teal);
+      background: transparent;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: .875rem;
+      padding: .65rem 1.5rem;
+      transition: all var(--transition)
+    }
+
+    .treatment-details-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-light);
+      margin-top: 2rem;
+      transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.4s ease;
+      overflow: hidden;
+    }
+
+    .treatment-img-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 320px;
+    }
+
+    .treatment-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .treatment-details-card:hover {
+      box-shadow: var(--shadow-lg);
+    }
+
+    .treatment-details-card:hover .treatment-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .treatment-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .feature-chip {
+      background: var(--bg-light);
+      color: var(--primary-teal-dark);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid rgba(14, 165, 164, 0.1);
+    }
+
+    .section-tag {
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--primary-teal);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: .75rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+      letter-spacing: -1px;
+    }
+
+    .section-sub {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      line-height: 1.6;
+    }
+
+    /* ── WHY + PROCESS ── */
+    #whyUs {
+      background: var(--bg-light);
+      padding: 100px 0;
+    }
+
+    .clinic-img-wrap {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      height: 100%;
+      min-height: 500px;
+    }
+
+    .clinic-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .why-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(15, 23, 42, 0.95));
+      padding: 3rem 2rem 2rem;
+      color: #fff;
+    }
+
+    .why-overlay h5 {
+      font-weight: 800;
+      margin-bottom: 1.25rem;
+      color: #fff;
+      font-size: 1.25rem;
+    }
+
+    .why-overlay ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .why-overlay ul li {
+      font-size: .9rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+    }
+
+    .why-overlay ul li i {
+      color: var(--accent-green);
+      font-size: 1.1rem;
+    }
+
+    .process-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .step-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 2rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      border: 1px solid var(--border-light);
+      transition: var(--transition);
+    }
+
+    .step-card:hover {
+      transform: translateX(10px);
+      box-shadow: var(--shadow-md);
+      border-left: 4px solid var(--primary-teal);
+    }
+
+    .step-num {
+      min-width: 48px;
+      height: 48px;
+      background: var(--bg-light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: var(--primary-teal);
+      font-size: 1.25rem;
+    }
+
+    .step-card h6 {
+      color: var(--text-dark);
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+
+    .step-card p {
+      color: var(--text-muted);
+      font-size: .875rem;
+      margin-bottom: 0;
+    }
+
+    /* ── EQUIPMENTS ── */
+    #equipments {
+      background: var(--white);
+      padding: 100px 0;
+    }
+
+    .equipment-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      transition: var(--transition);
+      height: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .equipment-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-teal);
+    }
+
+    .eq-img-wrap {
+      width: 100%;
+      height: 220px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .eq-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .equipment-card:hover .eq-img-wrap img {
+      transform: scale(1.1);
+    }
+
+    .equipment-card h5 {
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+      font-size: 1.15rem;
+    }
+
+    .equipment-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .eq-badge {
+      background: var(--bg-light);
+      color: var(--primary-teal);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ── TESTIMONIALS ── */
+    #reviews {
+      background: var(--bg-light);
+      padding: 80px 0;
+    }
+
+    .testi-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      height: 100%;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .testi-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .testi-card::before {
+      content: '"';
+      position: absolute;
+      top: 10px;
+      right: 30px;
+      font-size: 6rem;
+      color: rgba(14, 165, 164, 0.05);
+      font-family: serif;
+      line-height: 1;
+    }
+
+    /* ── CTA DARK ── */
+    #ctaBanner {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #0F172A 0%, #1e293b 100%);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .cta-banner-inner h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 1rem;
+      letter-spacing: -1.5px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0F172A;
+      color: #94a3b8;
+      padding: 80px 0 40px;
+    }
+
+    .footer-logo {
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-logo span {
+      color: var(--primary-teal);
+    }
+
+    .footer-desc {
+      font-size: .875rem;
+      line-height: 1.7;
+      color: #64748B;
+      max-width: 300px;
+      margin-bottom: 2rem;
+    }
+
+    footer h6 {
+      color: var(--white);
+      font-weight: 700;
+      font-size: .875rem;
+      margin-bottom: 1rem;
+    }
+
+    footer ul li a {
+      color: #64748B;
+      text-decoration: none;
+      font-size: .82rem;
+      transition: color var(--transition);
+    }
+
+    footer ul li a:hover {
+      color: var(--primary-teal);
+    }
+
+    .footer-contact li i {
+      color: var(--primary-teal);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 12px;
+      margin-top: 1.5rem;
+    }
+
+    .social-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94a3b8;
+      font-size: 1.1rem;
+      transition: var(--transition);
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .social-icon:hover {
+      background: var(--primary-teal);
+      color: var(--white);
+      transform: translateY(-5px);
+      border-color: var(--primary-teal);
+    }
+
+    .footer-map-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      padding: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 12px;
+      transition: var(--transition);
+    }
+
+    .footer-map-card:hover {
+      border-color: var(--primary-teal);
+      background: rgba(14, 165, 164, 0.05);
+    }
+
+    .footer-map-card iframe {
+      width: 100%;
+      height: 120px;
+      border-radius: 8px;
+      display: block;
+      border: none;
+    }
+
+    .footer-contact-inline {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      font-size: 0.82rem;
+      color: #94a3b8;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 40px;
+    }
+
+    .footer-contact-inline span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .footer-contact-inline i {
+      color: var(--primary-teal);
+      font-size: 1rem;
+    }
+
+    .footer-contact-inline .sep {
+      color: rgba(255, 255, 255, 0.1);
+      font-weight: 300;
+    }
+
+    /* ── GALLERY ── */
+    #gallery {
+      padding: 80px 0 60px;
+      background: var(--bg-light);
+      overflow: hidden;
+    }
+
+    #galleryGrid {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 16px;
+      padding: 10px 10px 24px;
+      scroll-snap-type: x proximity;
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: var(--primary-teal) rgba(14, 165, 164, 0.1);
+      -webkit-overflow-scrolling: touch;
+      align-items: stretch;
+    }
+
+    #galleryGrid::-webkit-scrollbar {
+      height: 5px;
+    }
+
+    #galleryGrid::-webkit-scrollbar-track {
+      background: rgba(14, 165, 164, 0.08);
+      border-radius: 10px;
+    }
+
+    #galleryGrid::-webkit-scrollbar-thumb {
+      background: var(--primary-teal);
+      border-radius: 10px;
+    }
+
+    .gallery-item {
+      flex: 0 0 320px;
+      scroll-snap-align: start;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (max-width: 991px) {
+      .gallery-item {
+        flex: 0 0 380px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .gallery-item {
+        flex: 0 0 240px;
+      }
+    }
+
+    .gallery-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 4/5;
+    }
+
+    .gallery-card:hover {
+      box-shadow: 0 8px 24px rgba(14, 165, 164, 0.18);
+      border-color: var(--primary-teal);
+    }
+
+    .video-card.instagram-reel {
+      background: #000;
+      padding: 0;
+      display: block;
+      width: 100%;
+      min-height: 200px;
+    }
+
+    .video-card.instagram-reel .instagram-media {
+      margin: 0 !important;
+      max-width: 100% !important;
+      width: 100% !important;
+      min-width: unset !important;
+      border-radius: var(--radius-lg) !important;
+      display: block !important;
+    }
+
+    .gallery-card img,
+    .gallery-card video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      pointer-events: none;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(14, 165, 164, 0.85), transparent 60%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      color: var(--white);
+      padding: 16px;
+      text-align: center;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .gallery-card:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-item {
+      flex: 0 0 320px;
+      scroll-snap-align: start;
+      user-select: none;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+    }
+
+    .filter-btn {
+      padding: 8px 30px;
+      border-radius: 50px;
+      border: 1.5px solid var(--border-light);
+      background: var(--white);
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--primary-teal);
+      color: var(--white);
+      border-color: var(--primary-teal);
+      box-shadow: 0 4px 12px rgba(14, 165, 164, 0.2);
+    }
+
+    /* ── FLOATING ELEMENTS ── */
+    .fab-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1040;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, .5);
+      color: #fff;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: transform var(--transition), box-shadow var(--transition)
+    }
+
+    .fab-wa:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 24px rgba(37, 211, 102, .6);
+      color: #fff
+    }
+
+    .fab-wa-ring {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid rgba(37, 211, 102, .4);
+      animation: ring 2s ease-out infinite
+    }
+
+    @keyframes ring {
+      0% {
+        transform: scale(1);
+        opacity: .8
+      }
+
+      100% {
+        transform: scale(1.5);
+        opacity: 0
+      }
+    }
+
+    .sticky-book {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 1040;
+      background: var(--accent-green);
+      color: var(--white);
+      border: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: .85rem;
+      padding: .75rem 1.75rem;
+      box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
+      display: none;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .sticky-book:hover {
+      background: var(--accent-green-dark);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(34, 197, 94, 0.5);
+      color: var(--white);
+    }
+
+    /* ── EXIT POPUP ── */
+    .exit-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(8px);
+      z-index: 1060;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .4s;
+    }
+
+    .exit-popup {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 3rem 2rem;
+      max-width: 480px;
+      width: 90%;
+      position: relative;
+      transform: translateY(30px);
+      transition: transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-align: center;
+      box-shadow: var(--shadow-premium);
+    }
+
+    .exit-overlay.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .exit-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      line-height: 1;
+      transition: var(--transition);
+    }
+
+    .exit-close:hover {
+      color: var(--primary-teal);
+      transform: rotate(90deg);
+    }
+
+    .booking-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 1070;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .4s;
+    }
+
+    .booking-overlay.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .booking-overlay.show .booking-modal {
+      transform: translateY(0);
+    }
+
+    .booking-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .booking-close:hover {
+      color: var(--primary-teal);
+      transform: rotate(90deg);
+    }
+
+    .progress-steps {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .progress-steps::before {
+      content: '';
+      position: absolute;
+      top: 18px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #f1f5f9;
+      z-index: 0;
+    }
+
+    .progress-bar-line {
+      position: absolute;
+      top: 18px;
+      left: 0;
+      height: 2px;
+      background: var(--primary-teal);
+      z-index: 1;
+      transition: width .4s ease;
+    }
+
+    .ps-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .ps-label {
+      font-size: .7rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .step-pane {
+      display: none;
+    }
+
+    .step-pane.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 1.5rem;
+    }
+
+    .choice-item i {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .choice-item.selected {
+      border-color: var(--primary-teal);
+      background: var(--bg-light);
+      color: var(--primary-teal);
+      box-shadow: 0 4px 12px rgba(14, 165, 164, 0.1);
+    }
+
+    .booking-modal {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      width: min(560px, 94vw);
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: var(--shadow-premium);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .ps-dot {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .9rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      transition: all .3s;
+    }
+
+    .ps-dot.active {
+      background: var(--primary-teal);
+      color: #fff;
+      box-shadow: 0 8px 16px rgba(14, 165, 164, 0.3);
+    }
+
+    .choice-item {
+      border: 2px solid #f1f5f9;
+      border-radius: 16px;
+      padding: 1.25rem 1rem;
+      cursor: pointer;
+      text-align: center;
+      transition: var(--transition);
+      font-size: .85rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .choice-item:hover {
+      border-color: var(--primary-teal);
+      background: var(--bg-light);
+      color: var(--primary-teal);
+    }
+
+    .doc-choice {
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      padding: .75rem 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: .5rem;
+      transition: all var(--transition)
+    }
+
+    .doc-choice:hover,
+    .doc-choice.selected {
+      border-color: var(--primary-teal);
+      background: var(--bg-light);
+    }
+
+    .doc-choice-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-teal), var(--primary-teal-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: .875rem;
+      flex-shrink: 0
+    }
+
+    .doc-choice h6 {
+      font-size: .875rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text-dark)
+    }
+
+    .doc-choice small {
+      font-size: .75rem;
+      color: var(--text-muted)
+    }
+
+    .time-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 1.25rem
+    }
+
+    .time-slot {
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      padding: .5rem;
+      text-align: center;
+      font-size: .8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition)
+    }
+
+    .time-slot:hover,
+    .time-slot.selected {
+      border-color: var(--primary-teal);
+      background: var(--bg-light);
+      color: var(--primary-teal)
+    }
+
+    .time-slot.disabled {
+      opacity: .5;
+      background: #f8fafc;
+      cursor: not-allowed;
+      border-style: dashed;
+    }
+
+    /* ── BOOKING MODAL ── */
+    .booking-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 1070;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .4s;
+    }
+
+    .booking-overlay.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .booking-modal {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      width: min(560px, 94vw);
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: var(--shadow-premium);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      transform: translateY(30px);
+      transition: transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .booking-overlay.show .booking-modal {
+      transform: translateY(0);
+    }
+
+    .booking-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: var(--transition);
+      z-index: 10;
+    }
+
+    .booking-close:hover {
+      color: var(--primary-teal);
+      transform: rotate(90deg);
+    }
+
+    .booking-form-title {
+      font-weight: 800;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-dark);
+    }
+
+    .booking-form-sub {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    /* ── INTEGRATED BOOKING SECTION ── */
+    #book-appointment {
+      background: var(--bg-light);
+      position: relative;
+    }
+
+    .booking-form-card {
+      border-radius: 24px;
+      border: 1px solid var(--border-light);
+      transform: translateY(0);
+      transition: var(--transition);
+    }
+
+    .btn-next,
+    .btn-back {
+      border-radius: 12px;
+      padding: .85rem;
+      font-weight: 700;
+      font-size: .9rem;
+      transition: all .3s;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .btn-next {
+      background: var(--primary-teal);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: .875rem;
+      padding: .7rem 1.5rem;
+      width: 100%;
+      transition: background var(--transition)
+    }
+
+    .btn-next:hover {
+      background: var(--primary-teal-dark)
+    }
+
+    .btn-back {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1.5px solid var(--border-light);
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: .875rem;
+      padding: .7rem 1.5rem;
+      width: 100%;
+      transition: all var(--transition);
+      margin-bottom: .5rem
+    }
+
+    .btn-back:hover {
+      border-color: var(--text-muted)
+    }
+
+    .confirm-summary {
+      background: var(--bg-light);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.25rem;
+      font-size: .82rem
+    }
+
+    .confirm-summary div {
+      display: flex;
+      justify-content: space-between;
+      padding: .3rem 0;
+      border-bottom: 1px solid var(--border-light)
+    }
+
+    .confirm-summary div:last-child {
+      border: none
+    }
+
+    .confirm-summary .lbl {
+      color: var(--text-muted);
+      font-weight: 500
+    }
+
+    .confirm-summary .val {
+      font-weight: 700;
+      color: var(--text-dark)
+    }
+
+    .booking-modal .form-control,
+    .booking-modal .form-select {
+      border-radius: 8px;
+      border: 1.5px solid #e2e8f0;
+      font-size: .85rem;
+      padding: .6rem .9rem;
+      transition: border-color var(--transition)
+    }
+
+    .booking-modal .form-control:focus,
+    .booking-modal .form-select:focus {
+      border-color: var(--primary-teal);
+      box-shadow: 0 0 0 3px rgba(14, 165, 164, 0.15);
+      outline: none
+    }
+
+    /* ── DOCTOR MODAL ── */
+    .doc-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, .75);
+      z-index: 1080;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s
+    }
+
+    .doc-modal-overlay.show {
+      opacity: 1;
+      pointer-events: all
+    }
+
+    .doc-modal {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      width: min(480px, 94vw);
+      position: relative;
+      transform: translateY(20px);
+      transition: transform .3s
+    }
+
+    .doc-modal-overlay.show .doc-modal {
+      transform: translateY(0)
+    }
+
+    .doc-modal-close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      cursor: pointer
+    }
+
+    .doc-modal img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 10px;
+      margin-bottom: 1rem
+    }
+
+    /* ── RIPPLE ── */
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .4);
+      transform: scale(0);
+      animation: ripple-anim .6s linear;
+      pointer-events: none
+    }
+
+    @keyframes ripple-anim {
+      to {
+        transform: scale(4);
+        opacity: 0
+      }
+    }
+
+    .footer-logo span {
+      color: var(--primary-teal);
+    }
+
+    .footer-desc {
+      font-size: .875rem;
+      line-height: 1.7;
+      color: #64748B;
+      max-width: 300px;
+      margin-bottom: 2rem;
+    }
+
+    .cta-banner-inner p {
+      color: #94a3b8;
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .slot-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(239, 68, 68, 0.1);
+      color: #fca5a5;
+      font-size: .85rem;
+      font-weight: 700;
+      padding: .5rem 1.25rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(239, 68, 68, 0.2);
+    }
+
+    .slot-badge i {
+      color: #ef4444;
+    }
+
+    .stars {
+      color: #f59e0b;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .testi-text {
+      font-size: 1rem;
+      color: var(--text-dark);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 1.5rem;
+    }
+
+    .testi-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--bg-light);
+      color: var(--primary-teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .testi-name {
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--text-dark);
+      margin-bottom: 2px;
+    }
+
+    .testi-loc {
+      font-size: .8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1200px) {
+      .hero-heading {
+        font-size: 3.5rem;
+      }
+
+      .hero-img-wrap img {
+        height: 450px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      #hero {
+        padding: 60px 0 40px;
+        height: auto;
+        min-height: 100vh;
+        text-align: center;
+        background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.7) 20%,
+            rgba(255, 255, 255, 0.4) 100%),
+          url('bg2.png');
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero-heading {
+        font-size: clamp(2.2rem, 8vw, 2.8rem);
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-sub {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .trust-indicators {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-content: center;
+        margin: 0 auto 2.5rem;
+      }
+
+      .d-flex.flex-wrap {
+        justify-content: center;
+        gap: 15px !important;
+      }
+
+      .quick-form-card {
+        position: static;
+        width: 100%;
+        max-width: 450px;
+        margin: 3rem auto 0;
+        transform: none;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+
+      .trust-strip-floating {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-heading {
+        font-size: 2.25rem;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+      }
+
+      .suggest-box {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .suggest-box .btn-primary-cta {
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      .sticky-book {
+        display: block !important;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-heading {
+        font-size: 2rem;
+      }
+
+      .btn-primary-cta,
+      .btn-outline-wa {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══════════════════ NAVBAR ══════════════════ -->
+  <nav class="navbar navbar-expand-lg sticky-top py-2" id="mainNav">
+    <div class="container">
+      <a class="nav-logo" href="#">
+        <img src="logo origin.png" alt="Physiomy Rehab Logo">
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#whyUs">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#treatments">Treatments</a></li>
+          <li class="nav-item"><a class="nav-link" href="#equipments">Equipments</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <div class="d-lg-flex">
+          <a href="#gallery" class="btn-gallery ripple-btn">
+            <i class="bi bi-images"></i> Gallery
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════ HERO ══════════════════ -->
+  <section id="hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="trust-badge"><i class="bi bi-patch-check-fill"></i> Coimbatore's Trusted Physiotherapy & Rehab
+            Centre</div>
+          <h1 class="hero-heading">Move Better.<br><span class="green">Live Better.</span></h1>
+          <p class="hero-sub">We help you recover, regain strength & live pain-free with expert care and advanced
+            rehabilitation.</p>
+
+          <div class="d-flex flex-wrap gap-3">
+            <button class="btn-primary-cta ripple-btn" onclick="openBooking()">Book Appointment Now <i
+                class="bi bi-arrow-right ms-1"></i></button>
+          </div>
+          <p class="avail-text"><span class="avail-dot"></span> Open Today: 9:00 AM – 8:00 PM</p>
+        </div>
+        <div class="col-lg-6 position-static">
+          <!-- Foreground image wrap removed to allow background image to shine -->
+          <div class="quick-form-card d-none d-lg-block">
+            <h5>Book Appointment</h5>
+            <p class="sub-text">It takes less than 30 seconds</p>
+            <form onsubmit="event.preventDefault(); submitQuickForm();">
+              <div class="row g-2 mb-2">
+                <div class="col-6">
+                  <select class="form-select h-100" id="qTreatment">
+                    <option selected disabled>Select Treatment</option>
+                    <option>Back & Neck Pain</option>
+                    <option>Sports Injury</option>
+                    <option>Post Surgery Rehab</option>
+                    <option>Joint Pain</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <select class="form-select h-100" id="qLocation" onchange="toggleAddress(this, 'qAddressWrapper')">
+                    <option selected disabled>Select Location</option>
+                    <option>Clinic Treatment</option>
+                    <option>Home Visit</option>
+                  </select>
+                </div>
+              </div>
+              <div class="gender-selection">
+                <label class="form-label small fw-bold d-block mb-2">Prefer Doctor Gender?</label>
+                <div class="gender-capsule mb-2">
+                  <button type="button" class="btn-gender active"
+                    onclick="updateDoctorInfo(this, 'Male', 'qDocInfo')">Male</button>
+                  <button type="button" class="btn-gender"
+                    onclick="updateDoctorInfo(this, 'Female', 'qDocInfo')">Female</button>
+                </div>
+                <div id="qDocInfo" class="doctor-suggestion-box" style="display: block;">
+                  <p><i class="bi bi-person-badge me-1"></i> <span class="doc-name">Dr. Pravin</span> (<span
+                      class="doc-exp">6+ Years</span> Exp)</p>
+                </div>
+                <input type="hidden" id="qSelectedDoc" value="Dr. Pravin (Male)">
+              </div>
+              <div id="qAddressWrapper" style="display:none;" class="mb-2">
+                <input type="text" class="form-control mb-1" id="qAddress" placeholder="Enter Home Address">
+                <button type="button" class="btn btn-sm w-100 text-primary p-0 text-start" style="font-size: 0.75rem;"
+                  onclick="getLocation('qAddress')"><i class="bi bi-geo-alt"></i> Use Current Location</button>
+              </div>
+              <div class="row g-2 mb-3">
+                <div class="col-6">
+                  <input type="text" class="form-control" id="qName" placeholder="Your Name" required>
+                </div>
+                <div class="col-6">
+                  <input type="tel" class="form-control" id="qPhone" placeholder="Mobile Number" required>
+                </div>
+              </div>
+              <button type="submit" class="btn-book ripple-btn">Book Now <i class="bi bi-arrow-right"></i></button>
+            </form>
+            <div class="form-footer">
+              <span><i class="bi bi-shield-lock-fill"></i> Safe & Secure</span>
+              <span><i class="bi bi-envelope-slash-fill"></i> No Spam</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Trust Strip -->
+    <div class="trust-strip-floating d-none d-lg-grid">
+      <div class="ts-item">
+        <div class="ts-icon"><i class="bi bi-star-fill"></i></div>
+        <div class="ts-content">
+          <div class="ts-val">4.8 <i class="bi bi-star-fill" style="font-size: 0.7rem; color: #F59E0B;"></i></div>
+          <div class="ts-lbl">Google Rating</div>
+        </div>
+      </div>
+      <div class="ts-item">
+        <div class="ts-icon"><i class="bi bi-people-fill"></i></div>
+        <div class="ts-content">
+          <div class="ts-val">1000+</div>
+          <div class="ts-lbl">Patients Treated</div>
+        </div>
+      </div>
+      <div class="ts-item">
+        <div class="ts-icon"><i class="bi bi-award-fill"></i></div>
+        <div class="ts-content">
+          <div class="ts-val">5+ Years</div>
+          <div class="ts-lbl">Avg. Experience</div>
+        </div>
+      </div>
+      <div class="ts-item">
+        <div class="ts-icon"><i class="bi bi-tools"></i></div>
+        <div class="ts-content">
+          <div class="ts-val">Modern</div>
+          <div class="ts-lbl">Equipment</div>
+        </div>
+      </div>
+      <div class="ts-item">
+        <div class="ts-icon"><i class="bi bi-person-heart"></i></div>
+        <div class="ts-content">
+          <div class="ts-val">Personalized</div>
+          <div class="ts-lbl">Care</div>
+        </div>
+      </div>
+      <div class="ts-item">
+        <div class="ts-icon"><i class="bi bi-shield-check"></i></div>
+        <div class="ts-content">
+          <div class="ts-val">Insurance</div>
+          <div class="ts-lbl">Assistance</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick form mobile -->
+    <div class="container d-lg-none mt-2">
+      <div class="glass-mobile-card p-4">
+        <h5 class="fw-800 mb-3 text-center" style="font-weight: 800;">Book Appointment</h5>
+        <p class="text-muted mb-4 text-center" style="font-size: .85rem;">It takes less than 30 seconds</p>
+        <form onsubmit="event.preventDefault(); submitQuickFormM();">
+          <div class="row g-2 mb-3">
+            <div class="col-6">
+              <select class="form-select h-100" id="qTreatmentM">
+                <option selected disabled>Select Treatment</option>
+                <option>Back & Neck Pain</option>
+                <option>Sports Injury</option>
+                <option>Post Surgery Rehab</option>
+                <option>Joint Pain</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <select class="form-select h-100" id="qLocationM" onchange="toggleAddress(this, 'qAddressWrapperM')">
+                <option selected disabled>Select Location</option>
+                <option>Clinic Treatment</option>
+                <option>Home Visit</option>
+              </select>
+            </div>
+          </div>
+          <div class="gender-selection">
+            <label class="form-label small fw-bold d-block mb-2 text-center">Prefer Doctor Gender?</label>
+            <div class="gender-capsule mb-2">
+              <button type="button" class="btn-gender active"
+                onclick="updateDoctorInfo(this, 'Male', 'qDocInfoM')">Male</button>
+              <button type="button" class="btn-gender"
+                onclick="updateDoctorInfo(this, 'Female', 'qDocInfoM')">Female</button>
+            </div>
+            <div id="qDocInfoM" class="doctor-suggestion-box text-center" style="display: block;">
+              <p><i class="bi bi-person-badge me-1"></i> <span class="doc-name">Dr. Pravin</span> (<span
+                  class="doc-exp">6+ Years</span>
+                Exp)</p>
+            </div>
+            <input type="hidden" id="qSelectedDocM" value="Dr. Pravin (Male)">
+          </div>
+          <div id="qAddressWrapperM" style="display:none;" class="mb-3">
+            <textarea class="form-control mb-1" id="qAddressM" rows="2" placeholder="Home Address"></textarea>
+            <button type="button" class="btn btn-sm text-primary p-0" style="font-size: 0.8rem;"
+              onclick="getLocation('qAddressM')"><i class="bi bi-geo-alt"></i> Detect My Location</button>
+          </div>
+          <div class="row g-2 mb-4">
+            <div class="col-6">
+              <input type="text" class="form-control" id="qNameM" placeholder="Your Name" required>
+            </div>
+            <div class="col-6">
+              <input type="tel" class="form-control" id="qPhoneM" placeholder="Mobile Number" required>
+            </div>
+          </div>
+          <button type="submit" class="btn-book ripple-btn w-100"
+            style="background: #25D366; color: white; border: none; border-radius: 12px; padding: .85rem; font-weight: 700; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);">Book
+            Now <i class="bi bi-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ SERVICES ══════════════════ -->
+  <section id="services">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="section-tag">What We Offer</p>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-sub">Comprehensive rehabilitation services designed for your complete recovery and long-term
+          wellness.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card" onclick="scrollToTreatments('Physiotherapy')">
+            <div class="svc-icon"><i class="bi bi-activity"></i></div>
+            <h5>Physiotherapy</h5>
+            <p>Evidence-based care to restore movement and reduce pain.</p>
+            <ul class="svc-list">
+              <li><i class="bi bi-check2-circle"></i> Orthopedic Physiotherapy</li>
+              <li><i class="bi bi-check2-circle"></i> Neurological Rehabilitation</li>
+              <li><i class="bi bi-check2-circle"></i> Post-Stroke Rehab</li>
+              <li><i class="bi bi-check2-circle"></i> Sports Injury Rehab</li>
+              <li><i class="bi bi-check2-circle"></i> Post-Surgical Physiotherapy</li>
+              <li><i class="bi bi-check2-circle"></i> Pediatric Physiotherapy</li>
+              <li><i class="bi bi-check2-circle"></i> Geriatric Physiotherapy</li>
+              <li><i class="bi bi-check2-circle"></i> Pain Management Therapy</li>
+              <li><i class="bi bi-check2-circle"></i> Manual Therapy / Mobilization</li>
+              <li><i class="bi bi-check2-circle"></i> Dry Needling</li>
+              <li><i class="bi bi-check2-circle"></i> Kinesio Taping</li>
+              <li><i class="bi bi-check2-circle"></i> Ergonomic Correction</li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card" onclick="scrollToTreatments('Occupational Therapy')">
+            <div class="svc-icon"><i class="bi bi-briefcase-fill"></i></div>
+            <h5>Occupational Therapy</h5>
+            <p>Empowering independence through functional rehabilitation.</p>
+            <ul class="svc-list">
+              <li><i class="bi bi-check2-circle"></i> ADL Training</li>
+              <li><i class="bi bi-check2-circle"></i> Hand Function Therapy</li>
+              <li><i class="bi bi-check2-circle"></i> Fine Motor Skill Training</li>
+              <li><i class="bi bi-check2-circle"></i> Sensory Integration</li>
+              <li><i class="bi bi-check2-circle"></i> Skill Development</li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card" onclick="scrollToTreatments('Speech Therapy')">
+            <div class="svc-icon"><i class="bi bi-chat-heart-fill"></i></div>
+            <h5>Speech Therapy</h5>
+            <p>Improving communication and overcoming speech barriers.</p>
+            <ul class="svc-list">
+              <li><i class="bi bi-check2-circle"></i> Speech Delay Intervention</li>
+              <li><i class="bi bi-check2-circle"></i> Articulation Therapy</li>
+              <li><i class="bi bi-check2-circle"></i> Stuttering Management</li>
+              <li><i class="bi bi-check2-circle"></i> Voice Therapy</li>
+              <li><i class="bi bi-check2-circle"></i> Aphasia & Dysarthria</li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card" onclick="scrollToTreatments('Psychological')">
+            <div class="svc-icon"><i class="bi bi-person-heart"></i></div>
+            <h5>Psychological & Counseling</h5>
+            <p>Professional mental health support for emotional and developmental well-being.</p>
+            <ul class="svc-list">
+              <li><i class="bi bi-check2-circle"></i> Behaviour Therapy</li>
+              <li><i class="bi bi-check2-circle"></i> Child Psychology</li>
+              <li><i class="bi bi-check2-circle"></i> Stress Management</li>
+              <li><i class="bi bi-check2-circle"></i> Family Counselling</li>
+              <li><i class="bi bi-check2-circle"></i> Developmental Assessments</li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card" onclick="scrollToTreatments('Homecare')">
+            <div class="svc-icon"><i class="bi bi-house-heart-fill"></i></div>
+            <h5>Homecare Physiotherapy</h5>
+            <p>Professional physiotherapy at your doorstep for maximum comfort.</p>
+            <ul class="svc-list">
+              <li><i class="bi bi-check2-circle"></i> Pain Relief (Back, Neck)</li>
+              <li><i class="bi bi-check2-circle"></i> Post-Surgery Rehab</li>
+              <li><i class="bi bi-check2-circle"></i> Stroke & Neuro Rehab</li>
+              <li><i class="bi bi-check2-circle"></i> Geriatric Care</li>
+              <li><i class="bi bi-check2-circle"></i> Paediatric Care</li>
+              <li><i class="bi bi-check2-circle"></i> Cardio-Pulmonary</li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex align-items-center justify-content-center">
+          <div class="text-center p-4">
+            <div
+              style="width:64px;height:64px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem">
+              <i class="bi bi-plus-circle-fill text-success" style="font-size:1.8rem"></i>
+            </div>
+            <p class="fw-bold mb-2" style="font-size:.95rem">Need a custom plan?</p>
+            <p class="text-secondary mb-3" style="font-size:.8rem">We'll tailor a program just for you.</p>
+            <button class="btn-cta ripple-btn" onclick="openBooking()">Get Consultation</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ TREATMENTS ══════════════════ -->
+  <section id="treatments">
+    <div class="container">
+      <div class="text-center mb-4">
+        <p class="section-tag">We Treat</p>
+        <h2 class="section-title">Treatments We Specialize In</h2>
+        <p class="section-sub">Find your condition below and let us match you with the right specialist.</p>
+      </div>
+      <div class="treatments-scroll mb-4">
+        <span class="treat-chip active" onclick="filterByTreatment(this,'Back & Neck Pain')">
+          <img src="Assets/Neck-pain-physio-in-coimbatore.JPG" alt="Back & Neck">
+          Back & Neck Pain</span>
+        <span class="treat-chip" onclick="filterByTreatment(this,'Sports Injury')">
+          <img src="Assets/Assets/best-sports-physiotherapy-in-coimbatore.jpg.jpeg" alt="Sports Injury">
+          Sports Injury</span>
+        <span class="treat-chip" onclick="filterByTreatment(this,'Post Surgery Rehab')">
+          <img src="Assets/Assets/Post-surgery-rehabilitation-in-coimbatore.jpg.png" alt="Post Surgery">
+          Post Surgery Rehab</span>
+        <span class="treat-chip" onclick="filterByTreatment(this,'Stroke Rehabilitation')">
+          <img src="Assets/Assets/stroke Rehab neuro.png" alt="Stroke">
+          Stroke Rehabilitation</span>
+        <span class="treat-chip" onclick="filterByTreatment(this,'Pediatric Therapy')">
+          <img src="Assets/download.jpg" alt="Pediatric">
+          Pediatric Therapy</span>
+        <span class="treat-chip" onclick="filterByTreatment(this,'Joint Pain')">
+          <img src="Assets/Assets/Joint Pain &amp; Arthritis Care.JPG" alt="Joint Pain">
+          Joint Pain</span>
+        <span class="treat-chip" onclick="filterByTreatment(this,'Neuro Rehab')">
+          <img src="Assets/Assets/Bone-and-joint-Physiotherapy-in-Coimbatore.png" alt="Neuro Rehab">
+          Neuro Rehab</span>
+        <span class="treat-chip" onclick="filterByTreatment(this,'Women\'s Health')">
+          <img src="Assets/Assets/Pregnancy-Therapy-in-Coimbatore.png" alt="Women's Health">
+          Women's Health</span>
+      </div>
+      <div id="treatmentDetails" class="treatment-details-card text-start">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <div class="treatment-img-wrap">
+              <img id="treatImg" src="Assets/Neck-pain-physio-in-coimbatore.JPG" alt="Treatment">
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="ps-lg-4 mt-4 mt-lg-0">
+              <h4 id="treatTitle" class="fw-800 mb-3">Back & Neck Pain Recovery</h4>
+              <p id="treatDesc" class="text-muted mb-4">Advanced treatment for slipped discs, cervical spondylosis, and
+                chronic lower back pain using evidence-based manual therapy and decompression techniques.</p>
+              <div id="treatFeatures" class="treatment-features mb-4">
+                <span class="feature-chip">Spinal Mobilization</span>
+                <span class="feature-chip">Posture Correction</span>
+                <span class="feature-chip">Nerve Decompression</span>
+              </div>
+              <button class="btn-primary-cta ripple-btn px-5" onclick="openBooking()">Book Appointment Now <i
+                  class="bi bi-calendar-plus ms-2"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════ WHY US + PROCESS ══════════════════ -->
+  <section id="whyUs">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="section-tag">Our Approach</p>
+        <h2 class="section-title">Why Patients Choose Physiomy</h2>
+      </div>
+      <div class="row g-5 align-items-stretch">
+        <div class="col-lg-6">
+          <div class="clinic-img-wrap">
+            <img src="Assets/best-rehab-centre-in-coimbatore.jpg" alt="Physiomy Rehab Clinic" />
+            <div class="why-overlay">
+              <h5>Why Patients Choose Physiomy</h5>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> Expert team with 5+ years experience</li>
+                <li><i class="bi bi-check-circle-fill"></i> Advanced rehabilitation equipment</li>
+                <li><i class="bi bi-check-circle-fill"></i> 1-on-1 personalized treatment plans</li>
+                <li><i class="bi bi-check-circle-fill"></i> Evidence-based therapy protocols</li>
+                <li><i class="bi bi-check-circle-fill"></i> Flexible appointment timings</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ps-lg-4">
+            <p class="section-tag">How It Works</p>
+            <h3 class="section-title mb-4">Our 4-Step Recovery Process</h3>
+            <div class="process-steps">
+              <div class="step-card">
+                <div class="step-num">1</div>
+                <div>
+                  <h6>Assessment</h6>
+                  <p>Comprehensive evaluation of your condition, medical history, pain levels, and movement patterns.
+                  </p>
+                </div>
+              </div>
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <div>
+                  <h6>Personalized Plan</h6>
+                  <p>A customized treatment roadmap designed specifically for your diagnosis and recovery goals.</p>
+                </div>
+              </div>
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <div>
+                  <h6>Therapy Sessions</h6>
+                  <p>Hands-on therapy using the latest techniques — manual therapy, exercise programs, and more.</p>
+                </div>
+              </div>
+              <div class="step-card">
+                <div class="step-num">4</div>
+                <div>
+                  <h6>Full Recovery</h6>
+                  <p>Progress monitoring and preventive guidance to ensure lasting results and prevent recurrence.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ EQUIPMENTS ══════════════════ -->
+  <section id="equipments">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="section-tag">Advanced Technology</p>
+        <h2 class="section-title">World-Class Equipments</h2>
+        <p class="section-sub">We use state-of-the-art physiotherapy technology to ensure faster recovery and better
+          results.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="equipment-card">
+            <div class="eq-badge">Pain Relief</div>
+            <div class="eq-img-wrap">
+              <img src="image copy.png" alt="Laser Therapy">
+            </div>
+            <h5>Laser Therapy (Class IV)</h5>
+            <p>High-power laser technology to accelerate tissue repair and reduce inflammation at a cellular level.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="equipment-card">
+            <div class="eq-badge">Deep Heat</div>
+            <div class="eq-img-wrap">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&q=80" alt="SWD">
+            </div>
+            <h5>Shortwave Diathermy (SWD)</h5>
+            <p>Utilizes electromagnetic energy to generate deep heat in tissues, improving circulation and healing.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="equipment-card">
+            <div class="eq-badge">Neuromuscular</div>
+            <div class="eq-img-wrap">
+              <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=500&q=80" alt="IFT">
+            </div>
+            <h5>IFT & TENS</h5>
+            <p>Advanced electrical stimulation for pain modulation, muscle re-education, and reducing swelling.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="equipment-card">
+            <div class="eq-badge">Soft Tissue</div>
+            <div class="eq-img-wrap">
+              <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=500&q=80" alt="Ultrasound">
+            </div>
+            <h5>Ultrasound Therapy</h5>
+            <p>Targeted sound waves to treat soft tissue injuries, chronic pain, and specialized muscle conditions.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="equipment-card">
+            <div class="eq-badge">Spine Care</div>
+            <div class="eq-img-wrap">
+              <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=500&q=80" alt="Traction">
+            </div>
+            <h5>Mechanical Traction</h5>
+            <p>Precise spinal decompression to relieve pressure on discs and nerves for back and neck recovery.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="equipment-card">
+            <div class="eq-badge">Post-Op Rehab</div>
+            <div class="eq-img-wrap">
+              <img src="re.png" alt="CPM">
+            </div>
+            <h5>CPM Machine</h5>
+            <p>Continuous Passive Motion technology for optimal joint mobility after knee or hip replacement surgery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ GALLERY ══════════════════ -->
+  <section id="gallery">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="section-tag">Video Showcase</p>
+        <h2 class="section-title">Patient Recovery Videos</h2>
+        <p class="section-sub">See our expert rehabilitation sessions and patient success stories in action.</p>
+      </div>
+
+      <div id="galleryGrid">
+        <!-- Video 1 -->
+        <div class="gallery-item videos">
+          <div class="gallery-card video-card instagram-reel shadow-premium">
+            <blockquote class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/reel/DUQUuDFj44d/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-version="14">
+            </blockquote>
+          </div>
+        </div>
+        <!-- Video 8 -->
+
+        <!-- Video 9 -->
+        <div class="gallery-item videos">
+          <div class="gallery-card video-card instagram-reel shadow-premium">
+            <blockquote class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/reel/DUaTfSpEWIl/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-version="14">
+            </blockquote>
+          </div>
+        </div>
+        <!-- Video 10 -->
+        <div class="gallery-item videos">
+          <div class="gallery-card video-card instagram-reel shadow-premium">
+            <blockquote class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/reel/DVeEJR5CGM7/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-version="14">
+            </blockquote>
+          </div>
+        </div>
+        <!-- Video 11 -->
+        <div class="gallery-item videos">
+          <div class="gallery-card video-card instagram-reel shadow-premium">
+            <blockquote class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/reel/DV_Lqzake05/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-version="14">
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ TESTIMONIALS ══════════════════ -->
+  <section id="reviews">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="section-tag">What Patients Say</p>
+        <h2 class="section-title">1000+ Success Stories</h2>
+        <p class="section-sub">Real recoveries. Real results. Hear from patients who trusted us with their health.</p>
+      </div>
+      <div class="row g-4" id="testiContainer">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="d-flex justify-content-center gap-2 mt-4" id="testiDots"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ BOOKING SECTION ══════════════════ -->
+  <section id="book-appointment" class="py-5">
+    <div class="container py-lg-5">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6">
+          <div class="booking-content pe-lg-5">
+            <p class="section-tag mb-3">Schedule Now</p>
+            <h2 class="section-title text-start mb-4">Start Your Recovery Journey Today</h2>
+            <p class="text-muted mb-5">Fill out the form and our team will get back to you within 2 hours to confirm
+              your appointment. Experience Coimbatore's most advanced physiotherapy care.</p>
+
+            <div class="booking-benefits">
+              <div class="benefit-item mb-4">
+                <div class="benefit-icon"><i class="bi bi-clock-history"></i></div>
+                <div>
+                  <h6 class="fw-bold mb-1">Quick Response</h6>
+                  <p class="small text-muted mb-0">Confirmation within 2 hours of booking.</p>
+                </div>
+              </div>
+              <div class="benefit-item mb-4">
+                <div class="benefit-icon"><i class="bi bi-person-check"></i></div>
+                <div>
+                  <h6 class="fw-bold mb-1">Expert Consultation</h6>
+                  <p class="small text-muted mb-0">Get matched with the right specialist for your condition.</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon"><i class="bi bi-shield-heart"></i></div>
+                <div>
+                  <h6 class="fw-bold mb-1">Personalized Care</h6>
+                  <p class="small text-muted mb-0">Custom recovery plan tailored to your needs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="booking-form-card shadow-premium p-4 p-md-5 bg-white border-radius-lg">
+            <h4 class="fw-800 mb-4">Book Appointment</h4>
+            <form id="mainBookingForm" onsubmit="event.preventDefault(); submitMainForm();">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Full Name</label>
+                  <input type="text" class="form-control" id="mName" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Phone Number</label>
+                  <input type="tel" class="form-control" id="mPhone" placeholder="10-digit mobile" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Select Treatment</label>
+                  <select class="form-select" id="mTreatment" required>
+                    <option selected disabled value="">Choose condition...</option>
+                    <option>Back & Neck Pain</option>
+                    <option>Sports Injury</option>
+                    <option>Post Surgery Rehab</option>
+                    <option>Stroke Rehabilitation</option>
+                    <option>Pediatric Therapy</option>
+                    <option>Joint Pain</option>
+                    <option>Neuro Rehab</option>
+                    <option>Women's Health</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Treatment Location</label>
+                  <select class="form-select" id="mLocation" required onchange="toggleAddress(this, 'mAddressWrapper')">
+                    <option selected disabled value="">Select location...</option>
+                    <option>Clinic Treatment</option>
+                    <option>Home Visit / Home Service</option>
+                  </select>
+                </div>
+                <div class="col-md-12">
+                  <div class="gender-selection">
+                    <label class="form-label small fw-bold d-block mb-2">Prefer Doctor Gender?</label>
+                    <div class="gender-capsule mb-2">
+                      <button type="button" class="btn-gender active"
+                        onclick="updateDoctorInfo(this, 'Male', 'mDocInfo')">Male</button>
+                      <button type="button" class="btn-gender"
+                        onclick="updateDoctorInfo(this, 'Female', 'mDocInfo')">Female</button>
+                    </div>
+                    <div id="mDocInfo" class="doctor-suggestion-box" style="display: block;">
+                      <p><i class="bi bi-person-badge me-1"></i> <span class="doc-name">Dr. Pravin</span> (<span
+                          class="doc-exp">6+ Years</span> Exp)</p>
+                    </div>
+                    <input type="hidden" id="mSelectedDoc" value="Dr. Pravin (Male)">
+                  </div>
+                </div>
+                <div class="col-md-12" id="mAddressWrapper" style="display:none;">
+                  <label class="form-label small fw-bold">Home Address</label>
+                  <textarea class="form-control mb-1" id="mAddress" rows="2"
+                    placeholder="Street, Landmark, City"></textarea>
+                  <button type="button" class="btn btn-sm text-primary p-0" style="font-size: 0.8rem;"
+                    onclick="getLocation('mAddress')"><i class="bi bi-geo-alt"></i> Detect My Location</button>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Preferred Date</label>
+                  <input type="date" class="form-control" id="mDate" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Preferred Time</label>
+                  <select class="form-select" id="mTime" required>
+                    <option selected disabled value="">Select slot...</option>
+                    <option>9:00 AM - 11:00 AM</option>
+                    <option>11:00 AM - 1:00 PM</option>
+                    <option>2:00 PM - 4:00 PM</option>
+                    <option>4:00 PM - 6:00 PM</option>
+                    <option>6:00 PM - 8:00 PM</option>
+                  </select>
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label small fw-bold">Message (Optional)</label>
+                  <textarea class="form-control" id="mMessage" rows="3"
+                    placeholder="Briefly describe your pain or symptoms"></textarea>
+                </div>
+                <div class="col-md-12 mt-4">
+                  <button type="submit" class="btn-primary-cta w-100 py-3 shadow-lg">
+                    <i class="bi bi-calendar-check me-2"></i> Confirm Booking Now
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ CTA BANNER ══════════════════ -->
+  <section id="ctaBanner">
+    <div class="container">
+      <div class="cta-banner-inner">
+        <div class="slot-badge"><i class="bi bi-exclamation-circle-fill"></i> Limited Slots Available Today</div>
+        <h2>Trusted by 1000+ Patients<br>in Coimbatore</h2>
+        <p>Don't let pain hold you back. Start your recovery journey today with our expert physiotherapists.</p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          <button class="btn-primary-cta ripple-btn" onclick="openBooking()"><i
+              class="bi bi-calendar-check me-2"></i>Book Your Appointment</button>
+          <a href="https://wa.me/916374041335?text=Hi,%20I%20want%20to%20book%20an%20appointment" target="_blank"
+            class="btn-outline-wa" style="color:#25D366;border-color:#25D366"><i class="bi bi-whatsapp me-2"></i>Chat on
+            WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ FOOTER ══════════════════ -->
+  <footer id="contact">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-3">
+          <a href="#" class="footer-logo d-block mb-3">
+            <img src="logo origin.png" alt="Physiomy Rehab Logo" style="height: 50px;">
+          </a>
+          <p class="footer-desc">Coimbatore's trusted physiotherapy and rehabilitation centre. Expert care for pain-free
+            living.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/916374041335" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6>Quick Links</h6>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#whyUs">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6>Services</h6>
+          <ul>
+            <li><a href="#services">Physiotherapy</a></li>
+            <li><a href="#services">Occupational Therapy</a></li>
+            <li><a href="#services">Speech Therapy</a></li>
+            <li><a href="#services">Wellness Programs</a></li>
+            <li><a href="#services">Homecare</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h6>Location</h6>
+          <div class="footer-map-card">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.332303025068!2d76.99386767570498!3d11.01358055476312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859d06b88019b%3A0x63351f0447333a92!2sPeelamedu%2C%20Coimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1713600000000!5m2!1sen!2sin"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <a href="https://maps.google.com" target="_blank"
+            class="btn-cta d-inline-flex align-items-center gap-2 w-100 justify-content-center"
+            style="border-radius:8px;padding:.5rem 1rem;font-size:.8rem"><i class="bi bi-map-fill"></i> Get
+            Directions</a>
+        </div>
+      </div>
+      <div class="footer-contact-inline">
+        <span><i class="bi bi-geo-alt-fill"></i> 123, Avinashi Road, Peelamedu, Coimbatore</span>
+        <span class="sep">|</span>
+        <span><i class="bi bi-telephone-fill"></i> +91 99999 99999</span>
+        <span class="sep">|</span>
+        <span><i class="bi bi-envelope-fill"></i> care@physiomyrehab.com</span>
+        <span class="sep">|</span>
+        <span><i class="bi bi-clock-fill"></i> Mon–Sat: 9 AM – 8 PM</span>
+      </div>
+      <hr class="footer-divider" />
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <p class="footer-bottom mb-0">© 2025 Physiomy Rehab. All rights reserved.</p>
+        <p class="footer-bottom mb-0">Made with <i class="bi bi-heart-fill text-danger"></i> in Coimbatore</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════ FLOATING ELEMENTS ══════════════════ -->
+  <a href="https://wa.me/916374041335?text=Hi,%20I%20want%20to%20book%20an%20appointment" class="fab-wa"
+    target="_blank">
+    <div class="fab-wa-ring"></div>
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <button class="sticky-book ripple-btn" id="stickyBook" onclick="openBooking()"><i
+      class="bi bi-calendar-check me-1"></i> Book Now</button>
+
+  <!-- ══════════════════ EXIT POPUP ══════════════════ -->
+  <div class="exit-overlay" id="exitOverlay">
+    <div class="exit-popup">
+      <button class="exit-close" onclick="closeExit()">×</button>
+      <div class="text-success mb-2" style="font-size:2rem"><i class="bi bi-emoji-frown-fill"></i></div>
+      <h4>Wait! Don't Leave Yet</h4>
+      <p>You're one step away from pain-free living. Book a free consultation with our expert physiotherapists today.
+      </p>
+      <div class="slot-badge d-inline-flex mb-3"><i class="bi bi-exclamation-circle-fill"></i> Only 3 slots left today
+      </div>
+      <button class="btn-primary-cta w-100 ripple-btn mb-2" onclick="closeExit();openBooking()"><i
+          class="bi bi-calendar-check me-2"></i>Book Free Consultation</button>
+      <a href="https://wa.me/916374041335" target="_blank" class="btn-outline-wa d-block text-center ripple-btn"
+        onclick="closeExit()"><i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp</a>
+      <p class="text-center mt-2" style="font-size:.75rem;color:var(--text-muted);cursor:pointer" onclick="closeExit()">
+        No
+        thanks, I'll stay in pain</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════ BOOKING MODAL ══════════════════ -->
+  <div class="booking-overlay" id="bookingOverlay">
+    <div class="booking-modal">
+      <button class="booking-close" onclick="closeBooking()">×</button>
+      <h4 class="booking-form-title">Book Appointment</h4>
+      <p class="booking-form-sub">Fill in the details below to schedule your session.</p>
+
+      <form id="modalBookingForm" onsubmit="event.preventDefault(); submitMainForm('modal');">
+        <div class="row g-3">
+          <div class="col-md-12">
+            <label class="form-label small fw-bold">Full Name *</label>
+            <input type="text" class="form-control" id="modal_mName" placeholder="Enter your full name" required>
+          </div>
+          <div class="col-md-12">
+            <label class="form-label small fw-bold">Phone Number *</label>
+            <input type="tel" class="form-control" id="modal_mPhone" placeholder="10-digit mobile number" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label small fw-bold">Select Treatment *</label>
+            <select class="form-select" id="modal_mTreatment" required>
+              <option selected disabled value="">Choose condition...</option>
+              <option>Back & Neck Pain</option>
+              <option>Sports Injury</option>
+              <option>Post Surgery Rehab</option>
+              <option>Stroke Rehabilitation</option>
+              <option>Pediatric Therapy</option>
+              <option>Joint Pain</option>
+              <option>Neuro Rehab</option>
+              <option>Women's Health</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label small fw-bold">Treatment Location *</label>
+            <select class="form-select" id="modal_mLocation" required
+              onchange="toggleAddress(this, 'modalAddressWrapper')">
+              <option selected disabled value="">Select location...</option>
+              <option>Clinic Treatment</option>
+              <option>Home Visit / Home Service</option>
+            </select>
+          </div>
+          <div class="col-md-12">
+            <div class="gender-selection">
+              <label class="form-label small fw-bold d-block mb-2 text-center">Prefer Doctor Gender?</label>
+              <div class="gender-capsule mb-2">
+                <button type="button" class="btn-gender active"
+                  onclick="updateDoctorInfo(this, 'Male', 'modal_mDocInfo')">Male</button>
+                <button type="button" class="btn-gender"
+                  onclick="updateDoctorInfo(this, 'Female', 'modal_mDocInfo')">Female</button>
+              </div>
+              <div id="modal_mDocInfo" class="doctor-suggestion-box text-center" style="display: block;">
+                <p><i class="bi bi-person-badge me-1"></i> <span class="doc-name">Dr. Pravin</span> (<span
+                    class="doc-exp">6+ Years</span>
+                  Exp)</p>
+              </div>
+              <input type="hidden" id="modal_mSelectedDoc" value="Dr. Pravin (Male)">
+            </div>
+          </div>
+          <div class="col-md-12" id="modalAddressWrapper" style="display:none;">
+            <label class="form-label small fw-bold">Home Address *</label>
+            <textarea class="form-control mb-1" id="modal_mAddress" rows="2"
+              placeholder="Street, Landmark, City"></textarea>
+            <button type="button" class="btn btn-sm text-primary p-0" style="font-size: 0.8rem;"
+              onclick="getLocation('modal_mAddress')"><i class="bi bi-geo-alt"></i> Detect My Location</button>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label small fw-bold">Preferred Date *</label>
+            <input type="date" class="form-control" id="modal_mDate" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label small fw-bold">Preferred Time *</label>
+            <select class="form-select" id="modal_mTime" required>
+              <option selected disabled value="">Select slot...</option>
+              <option>9:00 AM - 11:00 AM</option>
+              <option>11:00 AM - 1:00 PM</option>
+              <option>2:00 PM - 4:00 PM</option>
+              <option>4:00 PM - 6:00 PM</option>
+              <option>6:00 PM - 8:00 PM</option>
+            </select>
+          </div>
+          <div class="col-md-12">
+            <label class="form-label small fw-bold">Message (Optional)</label>
+            <textarea class="form-control" id="modal_mMessage" rows="2"
+              placeholder="Briefly describe your symptoms"></textarea>
+          </div>
+          <div class="col-md-12 mt-4">
+            <button type="submit" class="btn-primary-cta w-100 py-3 shadow-lg">
+              <i class="bi bi-whatsapp me-2"></i> Confirm via WhatsApp
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // ── STATE ──
+    const booking = { problem: '', doctor: 'Dr. Priya Sharma', date: '', time: '', name: '', phone: '' };
+    let currentStep = 1, exitShown = false, testiTimer = null;
+
+    // ── NAVBAR SCROLL ──
+    window.addEventListener('scroll', () => {
+      document.getElementById('mainNav').classList.toggle('scrolled', scrollY > 50);
+      const sb = document.getElementById('stickyBook');
+      const footer = document.getElementById('contact');
+      const footerTop = footer.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (scrollY > 400 && footerTop > windowHeight) {
+        sb.style.display = 'block';
+      } else {
+        sb.style.display = 'none';
+      }
+    });
+
+    // ── RIPPLE ──
+    document.addEventListener('click', e => {
+      const btn = e.target.closest('.ripple-btn');
+      if (!btn) return;
+      const r = document.createElement('span');
+      const rect = btn.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      r.className = 'ripple';
+      r.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX - rect.left - size / 2}px;top:${e.clientY - rect.top - size / 2}px`;
+      btn.style.position = 'relative';
+      btn.appendChild(r);
+      setTimeout(() => r.remove(), 600);
+    });
+
+    // ── QUICK FORM ──
+    function submitQuickForm() {
+      const t = document.getElementById('qTreatment').value;
+      const l = document.getElementById('qLocation').value;
+      const addr = document.getElementById('qAddress').value.trim();
+      const doc = document.getElementById('qSelectedDoc').value;
+      const n = document.getElementById('qName').value.trim();
+      const p = document.getElementById('qPhone').value.trim();
+      if (!n || !p) { alert('Please enter your name and phone number.'); return; }
+      if (!/^\d{10}$/.test(p.replace(/\s/g, ''))) { alert('Please enter a valid 10-digit phone number.'); return; }
+      const msg = `Hi, I want to book an appointment.\nName: ${n}\nPhone: ${p}\nService: ${t || 'General'}\nLocation: ${l || 'Not specified'}${addr ? '\nAddress: ' + addr : ''}${doc ? '\nPreferred Doctor: ' + doc : ''}`;
+      window.open(`https://wa.me/916374041335?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+    function submitQuickFormM() {
+      const t = document.getElementById('qTreatmentM').value;
+      const l = document.getElementById('qLocationM').value;
+      const addr = document.getElementById('qAddressM').value.trim();
+      const doc = document.getElementById('qSelectedDocM').value;
+      const n = document.getElementById('qNameM').value.trim();
+      const p = document.getElementById('qPhoneM').value.trim();
+      if (!n || !p) { alert('Please enter your name and phone number.'); return; }
+      const msg = `Hi, I want to book an appointment.\nName: ${n}\nService: ${t || 'General'}\nLocation: ${l || 'Not specified'}${addr ? '\nAddress: ' + addr : ''}${doc ? '\nPreferred Doctor: ' + doc : ''}`;
+      window.open(`https://wa.me/916374041335?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    // ── TREATMENTS ──
+    const treatMap = {
+      'Back & Neck Pain': {
+        title: 'Back & Neck Pain Recovery',
+        desc: 'Advanced treatment for slipped discs, cervical spondylosis, and chronic lower back pain using evidence-based manual therapy and decompression techniques.',
+        image: 'Assets/Neck-pain-physio-in-coimbatore.JPG',
+        features: ['Spinal Mobilization', 'Posture Correction', 'Nerve Decompression']
+      },
+      'Sports Injury': {
+        title: 'Sports Injury Rehabilitation',
+        desc: 'Specialized recovery for ACL tears, ligament injuries, and muscle strains. We use advanced taping and agility drills to ensure a safe return to sports.',
+        image: 'Assets/Assets/best-sports-physiotherapy-in-coimbatore.jpg.jpeg',
+        features: ['Kinesiology Taping', 'Injury Prevention', 'Functional Training']
+      },
+      'Post Surgery Rehab': {
+        title: 'Post Surgery Rehabilitation',
+        desc: 'Critical care after orthopedic surgeries like TKR or THR. We help you regain full range of motion and strength with a step-by-step guided program.',
+        image: 'Assets/Assets/Post-surgery-rehabilitation-in-coimbatore.jpg.png',
+        features: ['Joint Mobilization', 'Strength Building', 'Pain Management']
+      },
+      'Stroke Rehabilitation': {
+        title: 'Stroke & Neuro Recovery',
+        desc: 'Comprehensive neuro-rehab focused on neuroplasticity to help patients regain motor control, balance, and independence in daily activities.',
+        image: 'Assets/Assets/stroke Rehab neuro.png',
+        features: ['Balance Training', 'Gait Analysis', 'Cognitive Stimulation']
+      },
+      'Pediatric Therapy': {
+        title: 'Pediatric Physiotherapy',
+        desc: 'Gentle and effective therapy for children with cerebral palsy, developmental delays, and congenital issues to improve their quality of life.',
+        image: 'Assets/download.jpg',
+        features: ['Sensory Integration', 'Early Intervention', 'Play-based Therapy']
+      },
+      'Joint Pain': {
+        title: 'Joint Pain & Arthritis Care',
+        desc: 'Effective management for osteoarthritis, rheumatoid arthritis, and chronic knee pain. We focus on reducing inflammation and improving joint stability.',
+        image: 'Assets/Assets/Joint Pain & Arthritis Care.JPG',
+        features: ['Anti-inflammatory protocols', 'Weight Management', 'Impact reduction']
+      },
+      'Neuro Rehab': {
+        title: 'Advanced Neuro Rehabilitation',
+        desc: "Specialized care for Parkinson's, Multiple Sclerosis, and spinal cord injuries using modern therapeutic techniques and assistive tools.",
+        image: 'Assets/Assets/Bone-and-joint-Physiotherapy-in-Coimbatore.png',
+        features: ['Proprioception', 'Muscle Tone Control', 'Functional Independence']
+      },
+      "Women's Health": {
+        title: "Women's Wellness & Rehab",
+        desc: 'Specialized therapy for pre-natal care, post-partum recovery, pelvic floor strengthening, and osteoporosis management for women of all ages.',
+        image: 'Assets/Assets/Pregnancy-Therapy-in-Coimbatore.png',
+        features: ['Pelvic Floor Rehab', 'Pre-natal Yoga', 'Core Restoration']
+      }
+    };
+    let treatTimer = null;
+    function filterByTreatment(el, name, isAuto = false) {
+      if (!isAuto) clearInterval(treatTimer);
+      document.querySelectorAll('.treat-chip').forEach(c => c.classList.remove('active'));
+      el.classList.add('active');
+      const m = treatMap[name] || treatMap['Back & Neck Pain'];
+
+      const detailsCard = document.getElementById('treatmentDetails');
+      detailsCard.style.opacity = '0';
+      detailsCard.style.transform = 'translateY(10px)';
+
+      setTimeout(() => {
+        document.getElementById('treatTitle').textContent = m.title;
+        document.getElementById('treatDesc').textContent = m.desc;
+        document.getElementById('treatImg').src = m.image;
+
+        const featureContainer = document.getElementById('treatFeatures');
+        featureContainer.innerHTML = '';
+        m.features.forEach(f => {
+          const span = document.createElement('span');
+          span.className = 'feature-chip';
+          span.textContent = f;
+          featureContainer.appendChild(span);
+        });
+
+        detailsCard.style.opacity = '1';
+        detailsCard.style.transform = 'translateY(0)';
+      }, 300);
+    }
+    function scrollToTreatments(label) {
+      document.getElementById('treatments').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function startTreatTimer() {
+      const chips = document.querySelectorAll('.treat-chip');
+      let currentIndex = 0;
+      treatTimer = setInterval(() => {
+        currentIndex = (currentIndex + 1) % chips.length;
+        const nextChip = chips[currentIndex];
+        const name = nextChip.innerText.trim();
+        filterByTreatment(nextChip, name, true);
+      }, 4000);
+    }
+
+    function toggleAddress(select, wrapperId) {
+      const wrapper = document.getElementById(wrapperId);
+      if (select.value.includes('Home')) {
+        wrapper.style.display = 'block';
+        const field = wrapper.querySelector('textarea, input');
+        if (field) field.required = true;
+      } else {
+        wrapper.style.display = 'none';
+        const field = wrapper.querySelector('textarea, input');
+        if (field) field.required = false;
+      }
+    }
+
+    function updateDoctorInfo(el, gender, infoId) {
+      const parent = el.closest('.gender-selection');
+      parent.querySelectorAll('.btn-gender').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+
+      const infoBox = document.getElementById(infoId);
+      const nameSpan = infoBox.querySelector('.doc-name');
+      const expSpan = infoBox.querySelector('.doc-exp');
+      const hiddenInput = parent.querySelector('input[type="hidden"]');
+
+      if (gender === 'Male') {
+        nameSpan.textContent = 'Dr. Pravin';
+        expSpan.textContent = '6+ Years';
+        hiddenInput.value = 'Dr. Pravin (Male)';
+      } else {
+        nameSpan.textContent = 'Dr. Mehitha';
+        expSpan.textContent = '5+ Years';
+        hiddenInput.value = 'Dr. Mehitha (Female)';
+      }
+      infoBox.style.display = 'block';
+    }
+
+    function getLocation(inputId) {
+      const btn = event.currentTarget;
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<i class="bi bi-hourglass-split"></i> Locating...';
+      btn.disabled = true;
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+          const { latitude, longitude } = position.coords;
+          fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
+            .then(res => res.json())
+            .then(data => {
+              if (data.display_name) {
+                document.getElementById(inputId).value = data.display_name;
+              } else {
+                document.getElementById(inputId).value = `Lat: ${latitude}, Long: ${longitude}`;
+              }
+              btn.innerHTML = originalText;
+              btn.disabled = false;
+            })
+            .catch(() => {
+              document.getElementById(inputId).value = `Lat: ${latitude}, Long: ${longitude}`;
+              btn.innerHTML = originalText;
+              btn.disabled = false;
+            });
+        }, () => {
+          alert("Unable to retrieve your location. Please type manually.");
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        });
+      } else {
+        alert("Geolocation is not supported by this browser.");
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      }
+    }
+
+    // ── TESTIMONIALS ──
+    const testimonials = [
+      { name: 'Kavitha R.', loc: 'Coimbatore', rating: 5, text: '"After my knee surgery, I was told I might never walk normally again. The team at Physiomy proved them wrong. I\'m now back to my morning walks!"' },
+      { name: 'Arjun M.', loc: 'Coimbatore', rating: 5, text: '"Suffered from chronic back pain for 3 years. After 8 sessions here, I feel like a new person. Dr. Ravi\'s diagnosis was spot-on from day one."' },
+      { name: 'Preethi S.', loc: 'Coimbatore', rating: 5, text: '"My son had developmental delays and speech issues. Dr. Anitha\'s pediatric therapy made an incredible difference in just 3 months."' },
+      { name: 'Senthil K.', loc: 'Coimbatore', rating: 5, text: '"Sports injury sidelined me for months. Physiomy got me back on the field faster than expected. The personalized recovery plan was exceptional."' },
+      { name: 'Meena V.', loc: 'Coimbatore', rating: 5, text: '"Homecare service was a blessing for my elderly mother. The therapist was professional, punctual, and incredibly caring. Highly recommend!"' },
+      { name: 'Rajesh T.', loc: 'Coimbatore', rating: 5, text: '"Post-stroke rehabilitation here gave my father a new lease on life. The team\'s patience and expertise are truly unmatched in Coimbatore."' }
+    ];
+    function renderTestimonials() {
+      const c = document.getElementById('testiContainer');
+      const d = document.getElementById('testiDots');
+      c.innerHTML = ''; d.innerHTML = '';
+      testimonials.forEach((t, i) => {
+        const stars = '<i class="bi bi-star-fill"></i>'.repeat(t.rating);
+        const initials = t.name.split(' ').map(w => w[0]).join('');
+        c.innerHTML += `<div class="col-md-6 col-lg-4 testi-item" style="display:${i < 3 ? 'block' : 'none'}"><div class="testi-card"><div class="stars">${stars}</div><p class="testi-text">${t.text}</p><div class="testi-author"><div class="testi-avatar">${initials}</div><div><p class="testi-name">${t.name}</p><p class="testi-loc">${t.loc}</p></div></div></div></div>`;
+      });
+      [0, 1].forEach(i => {
+        const dot = document.createElement('button');
+        dot.style.cssText = `width:${i === 0 ? 24 : 8}px;height:8px;border-radius:50px;background:${i === 0 ? 'var(--primary-teal)' : '#e2e8f0'};border:none;transition:all .3s;padding:0`;
+        dot.dataset.page = i;
+        dot.addEventListener('click', () => showTestiPage(i));
+        d.appendChild(dot);
+      });
+      startTestiTimer();
+    }
+    let testiPage = 0;
+    function showTestiPage(page) {
+      testiPage = page;
+      const items = document.querySelectorAll('.testi-item');
+      items.forEach((el, i) => { el.style.display = (i >= page * 3 && i < page * 3 + 3) ? 'block' : 'none' });
+      document.querySelectorAll('#testiDots button').forEach((d, i) => {
+        d.style.width = i === page ? '24px' : '8px';
+        d.style.background = i === page ? 'var(--primary-teal)' : '#e2e8f0';
+      });
+    }
+    function startTestiTimer() {
+      clearInterval(testiTimer);
+      testiTimer = setInterval(() => { showTestiPage((testiPage + 1) % 2) }, 4000);
+    }
+
+    // ── BOOKING MODAL ──
+    function openBooking() {
+      document.getElementById('bookingOverlay').classList.add('show');
+      document.body.style.overflow = 'hidden';
+      const d = document.getElementById('modal_mDate');
+      if (d) d.min = new Date().toISOString().split('T')[0];
+    }
+    function closeBooking() {
+      document.getElementById('bookingOverlay').classList.remove('show');
+      document.body.style.overflow = '';
+    }
+
+    function submitMainForm(prefix = '') {
+      const p = prefix ? prefix + '_' : '';
+      const name = document.getElementById(p + 'mName').value.trim();
+      const phone = document.getElementById(p + 'mPhone').value.trim();
+      const treatment = document.getElementById(p + 'mTreatment').value;
+      const location = document.getElementById(p + 'mLocation').value;
+      const address = document.getElementById(p + 'mAddress').value.trim();
+      const doctor = document.getElementById(p + 'mSelectedDoc').value;
+      const date = document.getElementById(p + 'mDate').value;
+      const time = document.getElementById(p + 'mTime').value;
+      const msgText = document.getElementById(p + 'mMessage').value.trim();
+
+      if (!name || !phone || !treatment || !location || !date || !time) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+
+      if (!/^\d{10}$/.test(phone.replace(/\s/g, ''))) {
+        alert('Please enter a valid 10-digit phone number.');
+        return;
+      }
+
+      const waMsg = `Hi, I want to book an appointment.\n\nName: ${name}\nPhone: ${phone}\nTreatment: ${treatment}\nLocation: ${location}${address ? '\nAddress: ' + address : ''}${doctor ? '\nPreferred Doctor: ' + doctor : ''}\nPreferred Date: ${date}\nPreferred Time: ${time}${msgText ? '\nNote: ' + msgText : ''}`;
+      window.open(`https://wa.me/916374041335?text=${encodeURIComponent(waMsg)}`, '_blank');
+      if (prefix === 'modal') closeBooking();
+    }
+
+    function scrollToBooking() {
+      const el = document.getElementById('book-appointment');
+      if (el) {
+        const offset = 80;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = el.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
+    }
+
+    // Set min date for main form
+    const mDateInput = document.getElementById('mDate');
+    if (mDateInput) {
+      mDateInput.min = new Date().toISOString().split('T')[0];
+    }
+
+    // Legacy modal listeners
+    document.getElementById('bookingOverlay').addEventListener('click', e => { if (e.target.id === 'bookingOverlay') closeBooking() });
+    document.getElementById('exitOverlay').addEventListener('click', e => { if (e.target.id === 'exitOverlay') closeExit() });
+
+    // ── GALLERY FILTER ──
+    function filterGallery(category) {
+      const btns = document.querySelectorAll('.filter-btn');
+      btns.forEach(btn => {
+        if (btn.innerText.toLowerCase() === category || (category === 'all' && btn.innerText.toLowerCase() === 'all')) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'block';
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          }, 10);
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.8)';
+          setTimeout(() => {
+            item.style.display = 'none';
+          }, 400);
+        }
+      });
+    }
+
+
+    // ── INIT ──
+    renderTestimonials();
+    startTreatTimer();
+  </script>
+  <script async src="//www.instagram.com/embed.js"></script>
+</body>
+
+</html>
